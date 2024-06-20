@@ -1,0 +1,50 @@
+<mujoco model="task1">
+    <visual>
+        <headlight ambient="0.5 0.5 0.5"/>
+    </visual>
+
+    <option gravity="0 0 -9.81"/>
+
+    <worldbody>
+        <light name="top" pos="0 0 1"/>
+        
+        <geom type="plane" pos="-0.5 -0.5 0" size="1 1 0.1" rgba="1 0 1 1"/>
+        
+        <body name="main_body" euler="0 0 0">
+            <geom name="lower_part" type="box" pos="0 0 0.1" size="0.1 0.05 0.1" rgba="0.1 0.1 0.1 1"/>
+            <geom name="shar" type="sphere" pos="0 0 0.2" size="0.01" rgba="0.5 0.5 0.5 1"/>
+            <geom name="upper_part" type="box" pos="0 0 0.27" size="0.07 0.05 0.07" rgba="0.3 0.3 0.3 0.6"/>
+        </body>
+
+        <body name="motor1" euler="0 0 0">
+            
+            <geom type="cylinder" fromto="-0.1 -0.045 0.2 -0.123 -0.045 0.2"  size="0.0198" mass="0.065"/> <!-- fromto - defines uniquely main axis of the cylinder -->
+            <joint name="hinge_1" type="hinge" pos="-0.1115 -0.045 0.2" axis="1 0 0"/>
+            
+            <body name="motor2" euler="0 0 0">
+                
+                <geom type="cylinder" fromto="-0.1428 -0.045 0.1885 -0.1428 -0.045 0.2115" size="0.0198" mass="0.065"/>
+                <joint name="hinge_2" type="hinge" pos="-0.1428 -0.045 0.2" axis="0 0 1"/>
+                
+                <body name="motor3" euler="0 0 0">
+                    
+                    <geom type="cylinder" fromto="-0.1428 -0.0648 0.2 -0.1428 -0.0878 0.2" size="0.0198" mass="0.065"/>
+                    <joint name="hinge_3" type="hinge" pos="-0.1428 -0.0763 0.2" axis="0 1 0"/>
+                    <geom name="link1_1" type="box" pos="-0.1626 -0.1263 0.2" size="0.003 0.05 0.007" mass="0.01" rgba="0 1 0 1"/>
+                    <geom name="link1_2" type="box" pos="-0.123 -0.1263 0.2" size="0.003 0.05 0.007" mass="0.01" rgba="0 1 0 1"/>
+                    
+                    <body name="motor4" euler="0 0 0">
+                        
+                        <geom type="cylinder" fromto="-0.1543 -0.1763 0.2 -0.1313 -0.1763 0.2" size="0.0198" mass="0.065"/>
+                        <joint name="hinge_4" type="hinge" pos="-0.1428 -0.1763 0.2" axis="1 0 0"/>
+
+                        <geom name="link_2" type="box" pos="-0.1428 -0.2263 0.2" size="0.0115 0.05 0.0138" mass="0.02" rgba="0 0 1 1"/>
+                        <geom name="end-mass" type="sphere" pos="-0.1428 -0.2763 0.2" size="0.02" mass="0.08" rgba="1 0 0 1"/>
+                    </body>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+
+
+</mujoco>

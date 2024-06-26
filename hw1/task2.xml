@@ -11,13 +11,18 @@
         <!--geom type="plane" pos="-0.5 -0.5 0" size="1 1 0.1" rgba="1 0 1 1"/-->
 
         <body name="Low_Left" euler="0 0 0" pos="0 0 0.0198">
+            
             <geom type="cylinder" fromto="-0.0115 0 0 0.0115 0 0" size="0.0198" mass="0.065"/>
             <joint name="LL_hinge" type="hinge" axis="1 0 0" pos="0 0 0"/>
+            
             <geom type="box" size="0.01 0.01 0.05" pos="0 0 0.0698"/>
+            
             <body name="Mid_Left" euler="0 0 0" pos="0 0 0.1396">
                 <joint name="ML_hinge" type="hinge" axis="1 0 0" pos="0 0 0"/>
                 <geom type="cylinder" fromto="-0.0115 0 0 0.0115 0 0" size="0.0198" mass="0.065"/>
+                
                 <geom type="box" size="0.01 0.01 0.05" pos="0 0.0499978757 0.0487057741" axisangle="1 0 0 135.75"/>
+                
                 <body name="Up_Left" euler="0 0 0" pos="0 0.0999957513 0.0974115482">
                     <geom type="cylinder" fromto="-0.0115 0 0 0.0115 0 0" size="0.0198" mass="0.065"/>
                 </body>
@@ -27,10 +32,13 @@
         <body name="Low_Right" euler="0 0 0" pos="0 0.2 0.0198">
             <geom type="cylinder" fromto="-0.0115 0 0 0.0115 0 0" size="0.0198" mass="0.065"/>
             <joint name="LR_hinge" type="hinge" axis="1 0 0" pos="0 0 0"/>
+            
             <geom type="box" size="0.01 0.01 0.05" pos="0 0 0.0698"/>
+            
             <body name="Mid_Right" euler="0 0 0" pos="0 0 0.1396">
                 <joint name="MR_hinge" type="hinge" axis="1 0 0" pos="0 0 0"/>
                 <geom type="cylinder" fromto="-0.0115 0 0 0.0115 0 0" size="0.0198" mass="0.065"/>
+                
                 <geom type="box" size="0.01 0.01 0.05" pos="0 -0.0499978757 0.0487057741" axisangle="1 0 0 44.25"/>
             </body>
         </body>

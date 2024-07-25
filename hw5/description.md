@@ -1,0 +1,1 @@
+The thing is: I've tried to get those supports out, but they are stuck so hard I ended up penetrating them through the whole thing and they won't even budge. I've got lucky with one support but that's it. Btw, I broke my 2nd brick during the process and I am unable to print another one unfourtenately. So forgive me plz.
